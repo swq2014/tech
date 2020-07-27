@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>3d立体旋转的骰子</title>
 	<script src="jquery-3.3.1.min.js"></script>
 	<style>
 	*{margin: 0;padding: 0;}
@@ -16,6 +16,29 @@
 		"a4 a5 a6"
 		"a7 a8 a9";
 	}
+	.boxs div{width: 30px;height: 30px;background-color: black;border-radius: 50%;}
+	.box1 div{grid-area: a5;}
+
+	.box2 div:last-child{grid-area: a9}
+
+	.box3 div:nth-child(2){grid-area: a5}
+	.box3 div:nth-child(3){grid-area: a9}
+
+	.box4 div:nth-child(2){grid-area: a3}
+	.box4 div:nth-child(3){grid-area: a7}
+	.box4 div:nth-child(4){grid-area: a9}
+
+	.box5 div:nth-child(2){grid-area: a3}
+	.box5 div:nth-child(3){grid-area: a5}
+	.box5 div:nth-child(4){grid-area: a7}
+	.box5 div:nth-child(5){grid-area: a9}
+
+	.box6 div:nth-child(2){grid-area: a3}
+	.box6 div:nth-child(3){grid-area: a4}
+	.box6 div:nth-child(4){grid-area: a6}
+	.box6 div:nth-child(5){grid-area: a7}
+	.box6 div:nth-child(6){grid-area: a9}
+
 	.box{perspective: 200px;}
 	.box ul{width: 100px;height: 100px;margin:100px;
 		position: relative;
@@ -56,36 +79,21 @@
 
 	.box1,.box2,.box3,.box4,.box5,.box6{position: absolute;}
 	.box1{left: 0;top: 0;background-color: red;}
-	.box2{left: 100px;top: 0;transform-origin: left;transform: rotateY(90deg);background-color: yellow;}
-	.box3{left: -100px;top: 0px;transform-origin: right;transform: rotateY(-90deg);background-color: orange;}
-	.box4{left: 0px;top: -100px;transform-origin: bottom;transform: rotateX(90deg);background-color: green;}
-	.box5{left: 0px;top: 100px;transform-origin: top;transform: rotateX(-90deg);background-color: blue;}
-	.box6{left: 0px;top: 0px;transform: translateZ(-100px) rotateY(180deg);background-color: pink;}
-
-
-
-	.boxs div{width: 30px;height: 30px;background-color: black;border-radius: 50%;}
-	.box1 div{grid-area: a5;}
-
-	.box2 div:last-child{grid-area: a9}
-
-	.box3 div:nth-child(2){grid-area: a5}
-	.box3 div:nth-child(3){grid-area: a9}
-
-	.box4 div:nth-child(2){grid-area: a3}
-	.box4 div:nth-child(3){grid-area: a7}
-	.box4 div:nth-child(4){grid-area: a9}
-
-	.box5 div:nth-child(2){grid-area: a3}
-	.box5 div:nth-child(3){grid-area: a5}
-	.box5 div:nth-child(4){grid-area: a7}
-	.box5 div:nth-child(5){grid-area: a9}
-
-	.box6 div:nth-child(2){grid-area: a3}
-	.box6 div:nth-child(3){grid-area: a4}
-	.box6 div:nth-child(4){grid-area: a6}
-	.box6 div:nth-child(5){grid-area: a7}
-	.box6 div:nth-child(6){grid-area: a9}
+	.box2{left: 100px;top: 0;transform-origin: left;
+		transform: rotateY(90deg);background-color: yellow;
+	}
+	.box3{left: -100px;top: 0px;transform-origin: right;
+		transform: rotateY(-90deg);background-color: orange;
+	}
+	.box4{left: 0px;top: -100px;transform-origin: bottom;
+		transform: rotateX(90deg);background-color: green;
+	}
+	.box5{left: 0px;top: 100px;transform-origin: top;
+		transform: rotateX(-90deg);background-color: blue;
+	}
+	.box6{left: 0px;top: 0px;transform: translateZ(-100px) rotateY(180deg);
+		background-color: pink;
+	}
 	</style>
 </head>
 <body>
