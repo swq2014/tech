@@ -30,6 +30,7 @@
 		50%{transform: rotateX(-360deg);}
 		100%{transform: rotateY(0deg);}
 	}
+	.normal{animation: move 3s infinite linear !important;}
 	
 	.ups{animation: up 1s infinite linear !important;}
 	@keyframes up{
@@ -127,19 +128,27 @@
 	<span id="up">向上翻转</span><br><br>
 	<span id="bottom">向下翻转</span><br><br>
 	<span id="left">向左翻转</span><br><br>
-	<span id="right">向右翻转</span>
+	<span id="right">向右翻转</span><br><br>
+	<span id="normal">默认</span>
 	<script>
 		$("#up").click(function(){
 			$("ul").addClass("ups");
+			$("ul").removeClass("normal bottom left right");
 		});
 		$("#bottom").click(function(){
 			$("ul").addClass("bottom");
+			$("ul").removeClass("normal ups left right");
 		});
 		$("#left").click(function(){
 			$("ul").addClass("left");
+			$("ul").removeClass("normal ups bottom right");
 		});
 		$("#right").click(function(){
 			$("ul").addClass("right");
+			$("ul").removeClass("normal ups bottom left");
+		});
+		$("#normal").click(function(){
+			$("ul").removeClass("ups bottom left right");
 		});
 	</script>
 	</div>
