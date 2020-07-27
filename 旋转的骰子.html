@@ -5,7 +5,7 @@
 	<title>Document</title>
 	<style>
 	*{margin: 0;padding: 0;}
-	.box{width: 400px;margin: 100px auto;perspective: 200px;}
+	.box{width: 400px;margin: 100px auto;}
 	.boxs{width: 100px;height: 100px;border: 1px solid;border-radius: 8px;
 		display: grid;place-items:center center;
 		grid-template-columns: repeat(3,1fr);
@@ -15,8 +15,10 @@
 		"a4 a5 a6"
 		"a7 a8 a9";
 	}
-
-	.box ul{width: 100px;height: 100px;margin:100px;position: relative;animation: move 3s infinite linear;
+	.box{perspective: 200px;}
+	.box ul{width: 100px;height: 100px;margin:100px;
+		position: relative;
+		animation: move 3s infinite linear;
 		transform-style: preserve-3d;transition: .5s;
 		transform-origin: center center -50px;
 	}
