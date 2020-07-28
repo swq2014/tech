@@ -206,7 +206,8 @@ _ 下划线
 . 英文句点
 ! 感叹号
 ```
-公式 当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：
+公式 当你需要在编辑器中插入数学公式时，可以使用两个美元符 `$$` 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：
+```
 $$
 \mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix}
 \mathbf{i} & \mathbf{j} & \mathbf{k} \\
@@ -215,12 +216,32 @@ $$
 \end{vmatrix}
 ${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
 $$
+```
+
+$$
+\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial X}{\partial u} & \frac{\partial Y}{\partial u} & 0 \\
+\frac{\partial X}{\partial v} & \frac{\partial Y}{\partial v} & 0 \\
+\end{vmatrix}
+${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}
+$$    
+
 
 typora 画流程图、时序图(顺序图)、甘特图
 复制以下代码使用 typora 的源码模式粘贴到编辑器中查看效果：
 
 1、横向流程图源码格式：
 
+```
+graph LR
+A[方形] -->B(圆角)
+B --> C{条件a}
+C -->|a=1| D[结果1]
+C -->|a=2| E[结果2]
+F[横向流程图]
+
+```
 ```mermaid
 graph LR
 A[方形] -->B(圆角)
