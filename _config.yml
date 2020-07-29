@@ -1,3 +1,4 @@
 title: [舒大少博客]
 description: [一个95后少年的个人博客]
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman
+theme: jekyll-theme-architect
